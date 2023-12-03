@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkMode(beta)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html" id="home">HOME</a>
+            <a onclick="darkMode()" id="mode">DARK MODE</a>
+            <a onclick="mornMode()" id="model">MORNING MODE</a>
+            <a onclick="donkerMode()" id="donker">DONKER MODE</a>
+        </nav>
+        <p id="info" class="info"></p>
+        <h1>Sesi 6 Cuy University</h1>
+    </div>
+
+    <!-- Script -->
+    <script>
+        let info = document.getElementById("info");
+        let home = document.getElementById("home");
+        let mode = document.getElementById("mode");
+        let model = document.getElementById("model");
+        let donker = document.getElementById("donker");
+        let body = document.body;
+        let nav = document.nav;
+        const darkLimit = 5;
+        let darkCounter = 0;
+        let darkRemaining;
+
+        function darkMode() {
+            if (darkRemaining == 0) {
+                info.textContent = "💥JATAH DARK MODE ANDA HABIS💥";
+                home.textContent = "RESTART";
+                mode.style.display = "none";
+                return;
+            }
+            darkCounter += 1;
+            darkRemaining = darkLimit - darkCounter;
+            console.log("diklik");
+            mode.textContent = `Mode Dark Tersisa ${darkRemaining} x    `
+            body.classList.toggle("dark");
+        }
+        function mornMode() {
+            if (darkRemaining == 0) {
+                info.textContent = "💥JATAH MORN MODE ANDA HABIS💥";
+                home.textContent = "RESTART";
+                mode.style.display = "none";
+                return;
+            }
+            darkCounter += 1;
+            darkRemaining = darkLimit - darkCounter;
+            console.log("diklik");
+            mode.textContent = `Mode Morn Tersisa ${darkRemaining} x    `
+            body.classList.toggle("morn");
+        }
+        function donkerMode() {
+            if (darkRemaining == 0) {
+                info.textContent = "💥JATAH DONKER MODE ANDA HABIS💥";
+                home.textContent = "RESTART";
+                mode.style.display = "none";
+                return;
+            }
+            darkCounter += 1;
+            darkRemaining = darkLimit - darkCounter;
+            console.log("diklik");
+            mode.textContent = `Mode Donker Tersisa ${darkRemaining} x    `
+            body.classList.toggle("donker");
+        }
+        </script>
+</body>
+
+</html>

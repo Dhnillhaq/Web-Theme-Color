@@ -1,0 +1,80 @@
+*,
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.donker {
+    background-color: #0e0e78d8;
+    color: aliceblue;
+}
+
+.morn {
+    background-color: yellow;
+    color: black;
+}
+.container {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    top: 10%;
+    position: absolute;
+    font-size: 20px ;
+    animation: jedagJedug .5s infinite;
+}
+
+@keyframes jedagJedug {
+    0% {
+        font-size: 20px;
+    }
+    50% {
+        font-size: 22px;
+    }
+    100% {
+        font-size: 20px;
+    }
+}
+nav {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 15px;
+}
+.navDark {
+    background-color: white;
+    color: black;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background-color: #39365d;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+}
